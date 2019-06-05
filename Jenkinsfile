@@ -40,7 +40,7 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr:'10'))
     }
     stages {
-        stage("Подготовка") {
+        stage("Starting") {
             steps {
                 timestamps {
                     script {
@@ -66,7 +66,7 @@ pipeline {
                 }
             }
         }
-        stage("Запуск") {
+        stage("Running") {
             steps {
                 timestamps {
                     script {
